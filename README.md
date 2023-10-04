@@ -53,7 +53,7 @@ source ~/venv/quantec/bin/activate
 Clone the repo from Github:
 
 ``` bash
-pip install https://github.com/Bureau-for-Economic-Research/quantec-python
+pip install git+https://github.com/Bureau-for-Economic-Research/quantec-python
 ```
 
 ## Usage
