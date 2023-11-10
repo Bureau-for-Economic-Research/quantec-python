@@ -7,13 +7,12 @@ from io import StringIO
 
 log = logging.getLogger(__name__)
 
-
 def get_data(
     self,
     time_series_code: str,
     freq: str = "M",
-    start_year: str = "1900",
-    end_year: str = date.today().strftime("%Y"),
+    start_year: str = "",
+    end_year: str = "",
 ) -> Union[pd.DataFrame, dict]:
     """
     Fetch data from Quantec's API.
@@ -45,11 +44,11 @@ def get_data(
 
     query_params = {
         "timeSeriesCodes": time_series_code,
-        "respFormat": self.respformat,
+        "respFormat": "csv",
         "freqs": freq,
         "startYear": start_year,
         "endYear": end_year,
-        "isTidy": self.is_tidy,
+        "isTidy": True,
     }
 
     log.debug(f"[{time_series_code}] -- Querying with parameters: [{query_params}]")

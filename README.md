@@ -1,8 +1,9 @@
 
 # quantec <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[<img
+src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"
+class="quarto-discovered-preview-image" alt="Lifecycle: experimental" />](https://www.tidyverse.org/lifecycle/#experimental)
 [![](https://img.shields.io/github/last-commit/Bureau-for-Economic-Research/quantec.svg)](https://github.com/Bureau-for-Economic-Research/quantec-python/commits/develop)
 
 The
@@ -76,15 +77,13 @@ The package currently provides an interface to the
 around the `QuantecClient` class:
 
 - `apikey` to return `csv` or `json`
-- `respformat` to return `csv` or `json`
-- `is_tidy` tidyformat for easy read
 
 The main method `get_data` has the following options:
 
 - `time_series_code` time series code to return, `NMS-EC_BUS,NMS-GA_BUS`
 - `freq` frequency to return `M`, `Q` or `A`
-- `start_year` year to start
-- `end_year` year to end
+- `start_year` year to start (OPTIONAL)
+- `end_year` year to end (OPTIONAL)
 
 ``` python
 import logging

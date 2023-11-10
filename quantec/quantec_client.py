@@ -8,10 +8,6 @@ class QuantecClient(object):
     ----------
     apikey : str
         API key to use.
-    respformat : str, optional
-        Return `csv` or `json` in result (default csv)
-    is_tidy : logical, optional
-        Return data in tidy format (default TRUE)
 
     Returns
     -------
@@ -26,7 +22,5 @@ class QuantecClient(object):
         kwargs.setdefault("is_tidy", True)
 
         self.apikey = kwargs["apikey"]
-        self.respformat = kwargs["respformat"]
-        self.is_tidy = kwargs["is_tidy"]
 
     from ._get_data import get_data
